@@ -1,0 +1,16 @@
+
+total_classes = int(input("Enter Total Classes: "))
+attended_classes = int(input("Enter Attended Classes: "))
+
+attendance_percentage = (attended_classes / total_classes) * 100
+
+print("Attendance Percentage =", round(attendance_percentage, 2), "%")
+
+if attendance_percentage >= 75:
+    print("Attendance Requirement Met")
+else:
+    required = ((75 * total_classes) - (100 * attended_classes)) / 25
+    required = int(required) + 1
+
+    print("Attendance Requirement Not Met")
+    print("Attend", required, "more classes to reach 75%")
